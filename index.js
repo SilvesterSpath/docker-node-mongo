@@ -10,15 +10,15 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 
-console.log(process.env.MONGO_URI);
+/* console.log(process.env.MONGO_URI); */
 
 // Connect to MongoDB
-/* mongoose
+mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log(err)); */
-// Connect to MongoDB
-const dbUrl = process.env.MONGO_URI;
+  .catch((err) => console.log(err));
+
+/* const dbUrl = process.env.MONGO_URI;
 
 const mongoClient = new MongoClient(dbUrl, { useNewUrlParser: true });
 
@@ -32,7 +32,7 @@ mongoClient.connect((err, client) => {
   console.log('Connected to MongoDB database');
 
   // db ready to use
-});
+}) */
 
 const Item = require('./models/Item');
 

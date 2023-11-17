@@ -2,3 +2,4 @@ node_modules
 notes.txt
 _store
 .env
+.dockerignore
